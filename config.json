@@ -1,0 +1,28 @@
+{
+    "credentials": {
+        "orgId": "m0cbg7",
+        "apiKey": "a-m0cbg7-3m5u7teahg",
+        "authToken":"PVaxI?pzuFJQX0E(qn"
+    },
+    "parameters": {
+        "updateInterval": 10
+    },
+    "deviceTypes": {
+        "Bike": {
+            "event": "bikeData",
+            "properties": {
+                "speed": "300-500",
+                "distance": "1-133"
+            },
+            "devices":["bike1", "bike2", "bike3"]
+        },
+        "Car": {
+            "event": "carData",
+            "properties": {
+                "speed": "0-160",
+                "emission": "0-100"
+            },
+            "devices": ["car1", "car2"]
+        }
+    }
+}
