@@ -13,12 +13,12 @@ try:
 except Exception as e:
     print(e)
 
-hostUrl = config['credentials']['orgId'] + '.messaging.internetofthings.ibmcloud.com'
-id = 'a:{}:{}'.format(config['credentials']['orgId'], config['credentials']['apiKey'])
 auth = {
     'username': config['credentials']['apiKey'],
     'password': config['credentials']['authToken']
 }
+hostUrl = config['credentials']['orgId'] + '.messaging.internetofthings.ibmcloud.com'
+id = 'a:{}:{}'.format(config['credentials']['orgId'], config['credentials']['apiKey'])
 updateInterval = config['parameters']['updateInterval']
 
 def generatePayload(props):
