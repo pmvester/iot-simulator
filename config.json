@@ -9,7 +9,7 @@
     },
     "deviceTypes": {
         "Bike": {
-            "devices":["bike1", "bike2", "bike3"],
+            "devices": ["bike1", "bike2", "bike3"],
             "event": "bikeData",
             "properties": {
                 "speed": "0-270",
