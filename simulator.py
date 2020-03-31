@@ -19,7 +19,6 @@ auth = {
 }
 client_id = 'a:{}:{}'.format(config['credentials']['orgId'], config['credentials']['apiKey'])
 hostname = config['credentials']['orgId'] + '.messaging.internetofthings.ibmcloud.com'
-updateInterval = config['parameters']['updateInterval']
 
 def generatePayload(props):
     payload = ''
@@ -45,5 +44,5 @@ def oneSimulationRun():
     mqtt.multiple(generateMessages(), hostname=hostname, client_id=client_id, auth=auth)
         
 scheduler = BlockingScheduler()
-scheduler.add_job(oneSimulationRun, 'interval', seconds=updateInterval)
+scheduler.add_job(oneSimulationRun, 'interval', seconds=config['parameters']['updateInterval'])
 scheduler.start()
