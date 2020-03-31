@@ -12,16 +12,17 @@
             "devices": ["bike1", "bike2", "bike3"],
             "event": "bikeData",
             "properties": {
-                "speed": "0-270",
-                "distance": "1-133"
+                "speed": "0:270",
+                "distance": "1:133"
             }
         },
         "Car": {
             "devices": ["car1", "car2"],
             "event": "carData",
             "properties": {
-                "speed": "0-160",
-                "emission": "2-10"
+                "speed": "0:160",
+                "emission": "2:10",
+                "load": "-2:11"
             }
         }
     }
