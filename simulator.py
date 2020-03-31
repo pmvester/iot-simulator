@@ -7,7 +7,6 @@ from apscheduler.schedulers.blocking import BlockingScheduler
 
 CONFIG_FILE='./config.json'
 global config
-
 try:
     with open(CONFIG_FILE) as f:
         config = json.load(f)
