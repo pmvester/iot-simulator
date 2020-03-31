@@ -23,7 +23,7 @@ hostname = config['credentials']['orgId'] + '.messaging.internetofthings.ibmclou
 def generatePayload(props):
     payload = ''
     for propName, propBounds in props.items():
-        left, right = propBounds.split('-')
+        left, right = propBounds.split(':')
         propValue = random.uniform(int(left), int(right))
         if len(payload):
             payload += ','
