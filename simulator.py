@@ -24,7 +24,7 @@ def generatePayload(props):
     payload = ''
     for propName, propBounds in props.items():
         left, right = propBounds.split(':')
-        propValue = random.uniform(int(left), int(right))
+        propValue = random.uniform(float(left), float(right))
         if len(payload):
             payload += ','
         payload += '"{}": {}'.format(propName, propValue)
