@@ -16,8 +16,8 @@ except Exception as e:
 hostUrl = config['credentials']['orgId'] + '.messaging.internetofthings.ibmcloud.com'
 id = 'a:{}:{}'.format(config['credentials']['orgId'], config['credentials']['apiKey'])
 auth = {
-    "username": config['credentials']['apiKey'],
-    "password": config['credentials']['authToken']
+    'username': config['credentials']['apiKey'],
+    'password': config['credentials']['authToken']
 }
 updateInterval = config['parameters']['updateInterval']
 
@@ -37,7 +37,7 @@ def generateMessages():
         for deviceName in deviceType['devices']:
             topic = 'iot-2/type/{}/id/{}/evt/{}/fmt/json'.format(deviceTypeName, deviceName, deviceType['event'])
             payload = generatePayload(deviceType['properties'])
-            message = {"topic": topic, "payload": payload, "qos": 0, "retain": False}
+            message = {'topic': topic, 'payload': payload, 'qos': 0, 'retain': False}
             messages.append(message)
     return messages
 
