@@ -1,6 +1,6 @@
 import apscheduler
-import paho.mqtt.publish as mqtt
 import json
+import paho.mqtt.publish as mqtt
 import random
 
 from apscheduler.schedulers.blocking import BlockingScheduler
@@ -35,8 +35,8 @@ def generatePayload(props):
 def generateMessages():
     messages = []
     for deviceTypeName, deviceType in config['deviceTypes'].items():
-        for device in deviceType['devices']:
-            topic = 'iot-2/type/{}/id/{}/evt/{}/fmt/json'.format(deviceTypeName, device, deviceType['event'])
+        for deviceName in deviceType['devices']:
+            topic = 'iot-2/type/{}/id/{}/evt/{}/fmt/json'.format(deviceTypeName, deviceName, deviceType['event'])
             payload = generatePayload(deviceType['properties'])
             message = {"topic": topic, "payload": payload, "qos": 0, "retain": False}
             messages.append(message)
