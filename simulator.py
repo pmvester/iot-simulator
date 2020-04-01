@@ -1,17 +1,8 @@
-import apscheduler
+from apscheduler.schedulers.blocking import BlockingScheduler
+from config import config
 import json
 import paho.mqtt.publish as mqtt
 import random
-
-from apscheduler.schedulers.blocking import BlockingScheduler
-
-CONFIG_FILE='./config.json'
-try:
-    with open(CONFIG_FILE) as f:
-        global config
-        config = json.load(f)
-except Exception as e:
-    print(e)
 
 auth = {
     'username': config['credentials']['apiKey'],

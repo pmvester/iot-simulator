@@ -17,7 +17,7 @@
             }
         },
         "Car": {
-            "devices": ["car1", "car2"],
+            "devices": ["car1", "car2", "minicar"],
             "event": "carData",
             "properties": {
                 "speed": "0:160",
