@@ -6,9 +6,9 @@ import random
 from apscheduler.schedulers.blocking import BlockingScheduler
 
 CONFIG_FILE='./config.json'
-global config
 try:
     with open(CONFIG_FILE) as f:
+        global config
         config = json.load(f)
 except Exception as e:
     print(e)
