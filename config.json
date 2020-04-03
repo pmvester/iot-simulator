@@ -8,22 +8,31 @@
         "updateInterval": 10
     },
     "deviceTypes": {
-        "Bike": {
-            "devices": ["bike1", "bike2", "bike3"],
-            "event": "bikeData",
+        "ConveyorBelt": {
+            "devices": ["belt1", "belt2", "belt3", "belt4", "belt5", "belt6"],
+            "event": "beltEvent",
             "properties": {
-                "speed": "0:270",
-                "distance": "1:133"
+                "direction": "-1:+1",
+                "load": "0:100",
+                "speed": "0:5"
             }
         },
-        "Car": {
-            "devices": ["car1", "car2", "minicar"],
-            "event": "carData",
+        "DieselEngine": {
+            "devices": ["engine1", "engine2", "engine3", "engine4", "engine5", "engine6"],
+            "event": "engineEvent",
             "properties": {
-                "speed": "0:160",
-                "emission": "2:10",
-                "load": "-2:11",
-                "angle": "-0.7:+0.7"
+                "direction": "-1:+1",
+                "load": "0:100",
+                "rpm": "0:2000"
+            }
+        },
+        "Pump": {
+            "devices": ["pump001", "pump002", "pump003", "pump004", "pump005"],
+            "event": "pumpEvent",
+            "properties": {
+                "angle": "-0.7:+0.7",
+                "load": "0:100",
+                "rpm": "1700:1900"
             }
         }
     }

@@ -25,8 +25,17 @@ if __name__ == "__main__":
 
     client = wiotp.sdk.application.ApplicationClient(options)
 
+    def createDeviceType(name):
+        try:
+            client.registry.devicetypes[name]
+        except KeyError:
+            print('Device Type {} did not exist, creating it now ...'.format(name))
+            client.registry.devicetypes.create({'id': name, "description": "created by registrator.py"})    
+
     bulkCreateRequest = []
     for deviceTypeName, deviceType in config['deviceTypes'].items():
+        if (args.create):
+            createDeviceType(deviceTypeName)
         for deviceName in deviceType['devices']:
             bulkCreateRequest.append({'typeId': deviceTypeName, 'deviceId': deviceName})
 
