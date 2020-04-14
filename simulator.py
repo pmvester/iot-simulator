@@ -1,6 +1,5 @@
 from apscheduler.schedulers.blocking import BlockingScheduler
 from config import config
-import json
 import paho.mqtt.publish as mqtt
 import random
 
